@@ -1,5 +1,6 @@
 package com.enquero.datafactory.jsonfile;
 
+import com.enquero.datafactory.DataFactory.TestDataFactory;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
@@ -28,7 +29,7 @@ public class ReadJsonFile {
         Collection<Object[]> provider = new ArrayList<Object[]>();
         JSONParser jsonParser = new JSONParser();
         try {
-            JsonTestDataFactory dataFactory = new JsonTestDataFactory();
+            TestDataFactory dataFactory = new TestDataFactory();
             FileReader reader = new FileReader(jsonFilepath);
             Object obj = jsonParser.parse(reader);
             JSONObject json=  (JSONObject) obj;

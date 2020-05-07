@@ -1,11 +1,9 @@
 package com.enquero.webapp.driscolls.tests;
 
-import com.enquero.datafactory.xlsfile.TestDataFactory;
+import com.enquero.datafactory.DataFactory.TestDataFactory;
 import com.enquero.datafactory.xmlfile.ReadXMLFile;
-import com.enquero.datafactory.xmlfile.XMLTestDataFactory;
 import com.enquero.driverfactory.web.WebDriverFactory;
 import org.openqa.selenium.WebDriver;
-import org.testng.Assert;
 import org.testng.annotations.*;
 import java.io.IOException;
 import java.lang.reflect.Method;
@@ -24,14 +22,14 @@ public class TestLoginxml {
 
      @Parameters({ "browser", "webRunMode" })
     @BeforeClass
-    public void setup(String browser,String runmode) throws  MalformedURLException {
+    public void setup(@Optional ("chrome") String browser,@Optional ("local") String runmode) throws  MalformedURLException {
         System.out.println("RunMode is"+runmode);
         WebDriverFactory driverFactory = new WebDriverFactory();
         driver = driverFactory.getDriver(browser, runmode);
     }
 
-    @Test(dataProvider="getTestData")
-    public void testLogin(XMLTestDataFactory dataFactory)
+    //@Test(dataProvider="getTestData")
+    public void testLogin(TestDataFactory dataFactory)
     {
         System.out.println("Inside Method Test Money control");
         System.out.println(dataFactory.getInputParameters());

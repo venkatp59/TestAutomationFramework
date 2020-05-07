@@ -1,5 +1,6 @@
 package com.enquero.datafactory.csvfile;
 
+import com.enquero.datafactory.DataFactory.TestDataFactory;
 import org.json.simple.JSONObject;
 import java.io.*;
 import java.util.ArrayList;
@@ -23,7 +24,7 @@ public class ReadCSVFile {
      */
     public Iterator<Object[]> getTestData(String csvFilepath,String methodName){
         Collection<Object[]> provider = new ArrayList<Object[]>();
-        CSVTestDataFactory dataFactory= new CSVTestDataFactory();
+        TestDataFactory dataFactory= new TestDataFactory();
         String line="";
         try {
             BufferedReader br = new BufferedReader(new FileReader(csvFilepath));

@@ -1,8 +1,7 @@
 package com.enquero.webapp.driscolls.tests;
 
-import com.enquero.datafactory.jsonfile.JsonTestDataFactory;
+import com.enquero.datafactory.DataFactory.TestDataFactory;
 import com.enquero.datafactory.jsonfile.ReadJsonFile;
-import com.enquero.datafactory.xlsfile.TestDataFactory;
 import com.enquero.driverfactory.web.WebDriverFactory;
 import org.json.simple.JSONObject;
 import org.openqa.selenium.WebDriver;
@@ -10,7 +9,6 @@ import org.testng.annotations.*;
 import java.io.IOException;
 import java.lang.reflect.Method;
 import java.net.MalformedURLException;
-import java.util.AbstractList;
 import java.util.Iterator;
 
 public class Testloginjson {
@@ -23,14 +21,14 @@ public class Testloginjson {
     }
     @Parameters({ "browser", "webRunMode" })
     @BeforeClass
-    public void setup(String browser,String runmode) throws MalformedURLException {
+    public void setup(@Optional ("chrome") String browser,@Optional ("local") String runmode) throws MalformedURLException {
         System.out.println("RunMode is"+runmode);
         WebDriverFactory driverFactory = new WebDriverFactory();
         driver = driverFactory.getDriver(browser, runmode);
     }
 
-    @Test(dataProvider="getTestData")
-    public void testLogin(JsonTestDataFactory dataFactory)
+    //@Test(dataProvider="getTestData")
+    public void testLogin(TestDataFactory dataFactory)
     {
         System.out.println("Inside Method Test Money control");
         System.out.println(dataFactory.getInputParameters());

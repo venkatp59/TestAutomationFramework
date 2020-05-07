@@ -1,7 +1,9 @@
 package com.enquero.datafactory.xlsfile;
 
+import com.enquero.datafactory.DataFactory.TestDataFactory;
 import org.apache.poi.ss.usermodel.*;
-import org.json.JSONObject;
+import org.json.simple.JSONObject;
+import org.json.simple.parser.JSONParser;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -36,9 +38,12 @@ public class ReadXlsFile {
                 if (methodName.equalsIgnoreCase(testCaseName)) {
                     dataFactory.setTestCaseId(row.getCell(0).getStringCellValue());
                     dataFactory.setTestCaseName(row.getCell(1).getStringCellValue());
-                    JSONObject input_Obj = new JSONObject(row.getCell(2).getStringCellValue());
+                    String inputString= row.getCell(2).getStringCellValue();
+                    JSONParser parser = new JSONParser();
+                    JSONObject input_Obj = (JSONObject) parser.parse(inputString);
                     dataFactory.setInputParameters(input_Obj);
-                    JSONObject validation_Obj = new JSONObject(row.getCell(3).getStringCellValue());
+                    String validateString= row.getCell(3).getStringCellValue();
+                    JSONObject validation_Obj = (JSONObject) parser.parse(validateString);
                     dataFactory.setValidationParameters(validation_Obj);
                     provider.add(new Object[]{dataFactory});
                 } else {

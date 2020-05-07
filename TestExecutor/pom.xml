@@ -8,14 +8,7 @@
         <version>1.0-SNAPSHOT</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
-
     <artifactId>TestExecutor</artifactId>
-    <modules>
-        <module>../reporter</module>
-    </modules>
-    <properties>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    </properties>
 
     <build>
         <plugins>
@@ -28,6 +21,17 @@
                     <target>1.8</target>
                 </configuration>
             </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>2.22.1</version>
+               <configuration>
+                   <suiteXmlFiles>
+                       <suiteXmlFile>src/test/java/com/enquero/webapp/driscolls/driscolls_web.xml</suiteXmlFile>
+                   </suiteXmlFiles>
+            </configuration>
+
+            </plugin>
         </plugins>
     </build>
     <dependencies>
@@ -35,14 +39,8 @@
             <groupId>org.testng</groupId>
             <artifactId>testng</artifactId>
             <version>${testng.version}</version>
+            <scope>compile</scope>
         </dependency>
-        <dependency>
-            <groupId>org.testng</groupId>
-            <artifactId>testng</artifactId>
-            <version>6.14.3</version>
-            <scope>test</scope>
-        </dependency>
-        <!-- https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-databind -->
         <dependency>
             <groupId>com.fasterxml.jackson.core</groupId>
             <artifactId>jackson-databind</artifactId>
@@ -52,14 +50,31 @@
             <groupId>com.enquero</groupId>
             <artifactId>driverFactory </artifactId>
             <version>1.0-SNAPSHOT</version>
-            <scope>${scope-compile.version}</scope>
+            <!--<scope>${scope-compile.version}</scope>-->
+            <scope>compile</scope>
         </dependency>
         <dependency>
             <groupId>com.enquero</groupId>
             <artifactId>dataprovider</artifactId>
             <version>1.0-SNAPSHOT</version>
-            <scope>${scope-compile.version}</scope>
+            <!--<scope>${scope-compile.version}</scope>-->
+            <scope>compile</scope>
         </dependency>
+        <dependency>
+            <groupId>com.enquero</groupId>
+            <artifactId>reporter</artifactId>
+            <version>1.0-SNAPSHOT</version>
+          <!-- <scope>${scope-compile.version}</scope>-->
+            <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>io.appium</groupId>
+            <artifactId>java-client</artifactId>
+            <version>7.2.0</version>
+            <scope>compile</scope>
+        </dependency>
+
     </dependencies>
+
 
 </project>

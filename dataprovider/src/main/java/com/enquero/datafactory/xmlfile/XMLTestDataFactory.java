@@ -1,13 +1,13 @@
 package com.enquero.datafactory.xmlfile;
 
-import java.util.HashMap;
+import org.json.simple.JSONObject;
 
 public class XMLTestDataFactory {
 
     private String testCaseId;
     private String testCaseName;
-    private HashMap<Object, Object> inputParameters;
-    private HashMap<Object, Object> validationParameters;
+    private JSONObject inputParameters;
+    private JSONObject validationParameters;
 
 
     public String getTestCaseId() {
@@ -26,19 +26,19 @@ public class XMLTestDataFactory {
         this.testCaseName = testCaseName;
     }
 
-    public HashMap<Object, Object> getInputParameters() {
+    public JSONObject getInputParameters() {
         return inputParameters;
     }
 
-    public void setInputParameters(HashMap<Object, Object> inputParameters) {
+    public void setInputParameters(JSONObject inputParameters) {
         this.inputParameters = inputParameters;
     }
 
-    public HashMap<Object, Object> getValidationParameters() {
+    public JSONObject getValidationParameters() {
         return validationParameters;
     }
 
-    public void setValidationParameters(HashMap<Object, Object> validationParameters) {
+    public void setValidationParameters(JSONObject validationParameters) {
         this.validationParameters = validationParameters;
     }
 

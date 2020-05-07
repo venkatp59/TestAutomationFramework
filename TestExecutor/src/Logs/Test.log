@@ -1,0 +1,64 @@
+2020-05-06 22:32:23 INFO  TestLoginPage:37 - main************* Execution Started *************
+2020-05-06 22:32:24 INFO  TestLoginPage:48 - main Testlogin Test case started
+2020-05-06 22:32:24 WARN  TestLoginPage:50 - main Testlogin Test case started
+2020-05-06 22:32:24 FATAL TestLoginPage:51 - main Testlogin Test case started
+2020-05-06 22:32:24 ERROR TestLoginPage:52 - main Testlogin Test case started
+2020-05-06 22:32:27 INFO  TestLoginPage:63 - main testlogin Testcase ended
+2020-05-06 22:33:03 INFO  TestLoginPage:76 - main Validation successfull for second tc
+2020-05-06 22:33:03 INFO  TestLoginPage:79 - main facebook tc ended
+2020-05-06 22:33:04 INFO  TestLoginPage:86 - main************* Execution Ended *************
+2020-05-06 22:37:16 INFO  TestLoginPage:37 - main ************* Execution Started *************
+2020-05-06 22:37:18 INFO  TestLoginPage:47 - main Testlogin Test case started
+2020-05-06 22:37:18 WARN  TestLoginPage:50 - main Input Parameters not validated
+2020-05-06 22:37:18 INFO  TestLoginPage:54 - main Username validated successfully
+2020-05-06 22:37:20 INFO  TestLoginPage:58 - main testlogin Testcase ended
+2020-05-06 22:37:20 INFO  TestLoginPage:67 - main facebook tc started
+2020-05-06 22:37:24 INFO  TestLoginPage:71 - main Validation successfull for second tc
+2020-05-06 22:37:24 ERROR TestLoginPage:74 - main validation failed
+2020-05-06 22:37:24 INFO  TestLoginPage:81 - main ************* Execution Ended *************
+2020-05-07 09:48:19 INFO  TestLoginPage:37 - main ************* Execution Started *************
+2020-05-07 09:48:21 INFO  TestLoginPage:47 - main Testlogin Test case started
+2020-05-07 09:48:21 WARN  TestLoginPage:50 - main Input Parameters not validated
+2020-05-07 09:48:21 INFO  TestLoginPage:54 - main Username validated successfully
+2020-05-07 09:48:23 INFO  TestLoginPage:58 - main testlogin Testcase ended
+2020-05-07 09:48:23 INFO  TestLoginPage:67 - main facebook tc started
+2020-05-07 09:48:27 INFO  TestLoginPage:71 - main Validation successfull for second tc
+2020-05-07 09:48:27 ERROR TestLoginPage:74 - main validation failed
+2020-05-07 09:48:28 INFO  TestLoginPage:80 - main ************* Execution Ended *************
+2020-05-07 09:57:44 INFO  TestLoginPage:37 - main ************* Execution Started *************
+2020-05-07 09:57:45 INFO  TestLoginPage:47 - main Testlogin Test case started
+2020-05-07 09:57:45 WARN  TestLoginPage:50 - main Input Parameters not validated
+2020-05-07 09:57:45 INFO  TestLoginPage:54 - main Username validated successfully
+2020-05-07 09:57:47 INFO  TestLoginPage:58 - main testlogin Testcase ended
+2020-05-07 09:57:47 INFO  TestLoginPage:67 - main facebook tc started
+2020-05-07 09:58:22 INFO  TestLoginPage:71 - main Validation successfull for second tc
+2020-05-07 09:58:22 ERROR TestLoginPage:74 - main validation failed
+2020-05-07 09:58:23 INFO  TestLoginPage:80 - main ************* Execution Ended *************
+2020-05-07 15:07:08 INFO  TestLoginPage:37 - main ************* Execution Started *************
+2020-05-07 15:07:09 INFO  TestLoginPage:47 - main Testlogin Test case started
+2020-05-07 15:07:09 WARN  TestLoginPage:50 - main Input Parameters not validated
+2020-05-07 15:07:09 INFO  TestLoginPage:54 - main Username validated successfully
+2020-05-07 15:07:13 INFO  TestLoginPage:58 - main testlogin Testcase ended
+2020-05-07 15:07:13 INFO  TestLoginPage:67 - main facebook tc started
+2020-05-07 15:07:19 INFO  TestLoginPage:71 - main Validation successfull for second tc
+2020-05-07 15:07:19 ERROR TestLoginPage:74 - main validation failed
+2020-05-07 15:07:20 INFO  TestLoginPage:81 - main ************* Execution Ended *************
+2020-05-07 15:09:29 INFO  TestLoginPage:37 - main ************* Execution Started *************
+2020-05-07 15:09:30 INFO  TestLoginPage:47 - main Testlogin Test case started
+2020-05-07 15:09:30 WARN  TestLoginPage:50 - main Input Parameters not validated
+2020-05-07 15:09:30 INFO  TestLoginPage:54 - main Username validated successfully
+2020-05-07 15:09:34 INFO  TestLoginPage:58 - main testlogin Testcase ended
+2020-05-07 15:09:34 INFO  TestLoginPage:67 - main facebook tc started
+2020-05-07 15:09:41 INFO  TestLoginPage:71 - main Validation successfull for second tc
+2020-05-07 15:09:41 ERROR TestLoginPage:74 - main validation failed
+2020-05-07 15:09:41 INFO  TestLoginPage:76 - main Validation successfull for second tc
+2020-05-07 15:09:41 INFO  TestLoginPage:81 - main ************* Execution Ended *************
+2020-05-07 15:11:52 INFO  TestLoginPage:37 - main ************* Execution Started *************
+2020-05-07 15:11:53 INFO  TestLoginPage:47 - main Testlogin Test case started
+2020-05-07 15:11:53 WARN  TestLoginPage:50 - main Input Parameters not validated
+2020-05-07 15:11:53 INFO  TestLoginPage:54 - main Username validated successfully
+2020-05-07 15:11:58 INFO  TestLoginPage:58 - main testlogin Testcase ended
+2020-05-07 15:11:59 INFO  TestLoginPage:67 - main facebook tc started
+2020-05-07 15:12:04 INFO  TestLoginPage:71 - main Validation successfull for second tc
+2020-05-07 15:12:04 ERROR TestLoginPage:74 - main validation failed
+2020-05-07 15:12:04 INFO  TestLoginPage:81 - main ************* Execution Ended *************
