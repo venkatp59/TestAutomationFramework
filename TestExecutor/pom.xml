@@ -10,13 +10,9 @@
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>TestExecutor</artifactId>
-    <modules>
-        <module>../reporter</module>
-    </modules>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
-
     <build>
         <plugins>
             <plugin>
@@ -36,6 +32,7 @@
             <artifactId>testng</artifactId>
             <version>${testng.version}</version>
         </dependency>
+
         <dependency>
             <groupId>org.testng</groupId>
             <artifactId>testng</artifactId>
@@ -59,6 +56,30 @@
             <artifactId>dataprovider</artifactId>
             <version>1.0-SNAPSHOT</version>
             <scope>${scope-compile.version}</scope>
+        </dependency>
+        <dependency>
+            <groupId>io.appium</groupId>
+            <artifactId>java-client</artifactId>
+            <version>7.2.0</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.enquero</groupId>
+            <artifactId>api_utility</artifactId>
+            <version>1.0-SNAPSHOT</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+        <groupId>com.enquero</groupId>
+        <artifactId>reporter</artifactId>
+        <version>1.0-SNAPSHOT</version>
+        <!-- <scope>${scope-compile.version}</scope>-->
+        <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-databind</artifactId>
+            <version>2.9.8</version>
         </dependency>
     </dependencies>
 

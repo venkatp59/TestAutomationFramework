@@ -18,9 +18,9 @@ public class TestMobileApp {
         androidDriver = new AndroidDriverFactory().getAndroidDriver(appLocation);
         //androidDriver.quit();
     }
-    @Test
+/*    @Test
     public void testapp()
     {
         androidDriver.getBatteryInfo();
-    }
+    }*/
 }

@@ -1,5 +1,3 @@
-com\enquero\webapp\driscolls\tests\Testlogincsv.class
 com\enquero\webapp\driscolls\tests\TestLoginPage.class
+com\enquero\api\driscolls\TestVersionReleaseDate.class
 com\enquero\mobileapp\driscolls\TestMobileApp.class
-com\enquero\webapp\driscolls\tests\TestLoginxml.class
-com\enquero\webapp\driscolls\tests\Testloginjson.class

@@ -11,7 +11,7 @@ import java.util.logging.Logger;
 public class WebDriverFactory {
 
     public Logger logger = Logger.getLogger(this.getClass().getSimpleName());
-    private WebDriver driver;
+    private static WebDriver driver;
 
     public WebDriverFactory() {
 
@@ -40,6 +40,10 @@ public class WebDriverFactory {
                     break;
             }
         }
+        return driver;
+
+    }
+    public static WebDriver getDriverinstance(){
         return driver;
     }
 }

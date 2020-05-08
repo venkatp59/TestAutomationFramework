@@ -1,11 +1,9 @@
 package com.enquero.webapp.driscolls.tests;
 
+
 import com.enquero.datafactory.xlsfile.ReadXlsFile;
 import com.enquero.datafactory.xlsfile.TestDataFactory;
-import com.enquero.datafactory.xmlfile.ReadXMLFile;
-import com.enquero.datafactory.xmlfile.XMLTestDataFactory;
 import com.enquero.driverfactory.web.WebDriverFactory;
-import net.bytebuddy.implementation.bind.MethodDelegationBinder;
 import org.json.JSONObject;
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
@@ -16,13 +14,14 @@ import java.lang.reflect.Method;
 import java.net.MalformedURLException;
 import java.util.Iterator;
 
+
 public class TestLoginPage {
 
     WebDriver driver;
     @DataProvider(name="getTestData", parallel=false)
     public Iterator<Object[]> getTestData(Method m) throws IOException {
         ReadXlsFile rd = new ReadXlsFile();
-        return rd.getTestData("C:\\Enquero_Automation_Framework\\TestExecutor\\src\\main\\resources\\testData.xlsx","testcase",m.getName());
+        return rd.getTestData("C:\\Users\\VivekVerma\\OneDrive - Enquero\\IntelleJ-Workspace\\Enquero_Automation_Framework\\TestExecutor\\src\\main\\resources\\testData.xlsx","testcase",m.getName());
 
     }
     @Parameters({ "browser", "webRunMode" })
@@ -33,6 +32,7 @@ public class TestLoginPage {
         driver = driverFactory.getDriver(browser, runmode);
     }
 
+/*
     @Test(dataProvider="getTestData")
     public void testLogin(TestDataFactory dataFactory)
     {
@@ -42,8 +42,8 @@ public class TestLoginPage {
         String username=obj.get("username").toString();
         System.out.println(username);
         System.out.println(dataFactory.getValidationParameters());
-        Assert.assertEquals(username,"SwatiChetty");
-        driver.get("https://www.moneycontrol.com/");
+        Assert.assertEquals(username,"vivekverma");
+        //driver.get("https://www.moneycontrol.com/");
     }
 
     @Test(dataProvider="getTestData")
@@ -53,13 +53,11 @@ public class TestLoginPage {
         System.out.println(dataFactory.getInputParameters());
         System.out.println(dataFactory.getValidationParameters());
     }
+*/
 
     @AfterClass
     public  void tearDown(){
         driver.quit();
     }
 
-    public void abc(){
-
-    }
 }

@@ -14,7 +14,7 @@ public class ReadXlsFile {
     public static void main(String[] args) {
         ReadXlsFile rd = new ReadXlsFile();
         Iterator<Object[]> hello;
-        hello=rd.getTestData("C:\\Enquero_Automation_Framework\\TestExecutor\\src\\main\\resources\\testData.xlsx","testcase","testLogin");
+        hello=rd.getTestData("C:\\Users\\VivekVerma\\OneDrive - Enquero\\IntelleJ-Workspace\\Enquero_Automation_Framework\\TestExecutor\\src\\main\\resources\\testData.xlsx","testcase","testLogin");
         while(hello.hasNext()) {
             System.out.println(hello.next().toString());
         }
