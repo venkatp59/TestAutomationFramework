@@ -28,15 +28,6 @@ public class ReadXMLFile {
     public static JSONObject input_Parameter1;
     public static JSONObject validation_Parameter1;
 
-    public static void main(String[] args){
-       ReadXMLFile rd = new ReadXMLFile();
-       Iterator<Object[]> testData;
-       testData =rd.getTestData("C:\\Enquero_Automation_Framework\\TestExecutor\\src\\main\\resources\\testData.xml","First");
-       while(testData.hasNext()) {
-           System.out.println(testData.next().toString());
-       }
-   }
-
     /**
      * @param xmlFilename the path for the XML file
      * @param nodeValue the testcase name

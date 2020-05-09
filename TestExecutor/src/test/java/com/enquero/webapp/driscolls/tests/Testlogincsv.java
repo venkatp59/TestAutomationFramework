@@ -14,11 +14,13 @@ import java.util.Iterator;
 public class Testlogincsv {
 
     WebDriver driver;
+    String path= System.getProperty("user.dir")+System.getProperty("file.separator")+"src\\main\\resources\\testData.csv";
+
     @DataProvider(name="getTestData", parallel=false)
     public Iterator<Object[]> getTestData(Method m) throws IOException {
         System.out.println("started");
         ReadCSVFile rd = new ReadCSVFile();
-        return rd.getTestData("C:\\Enquero_Automation_Framework\\TestExecutor\\src\\main\\resources\\testData.csv","testLoginFacebook");
+        return rd.getTestData(path,"testLoginFacebook");
     }
 
     @Parameters({ "browser", "webRunMode" })
@@ -46,7 +48,7 @@ public class Testlogincsv {
     //@Test(dataProvider="getTestData")
     public void testLoginFacebook(TestDataFactory dataFactory) {
         System.out.println("Inside Method Test Facebook");
-        //driver.get("https://www.facebook.com/");
+        driver.get("https://www.seleniumeasy.com/");
         System.out.println(dataFactory.getInputParameters());
         System.out.println(dataFactory.getValidationParameters());
     }

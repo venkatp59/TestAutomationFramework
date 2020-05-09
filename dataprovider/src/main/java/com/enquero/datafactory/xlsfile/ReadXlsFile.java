@@ -13,15 +13,6 @@ import java.util.Iterator;
 
 public class ReadXlsFile {
 
-    public static void main(String[] args) {
-        ReadXlsFile rd = new ReadXlsFile();
-        Iterator<Object[]> hello;
-        hello=rd.getTestData("C:\\Enquero_Automation_Framework\\TestExecutor\\src\\main\\resources\\testData.xlsx","testcase","testLogin");
-        while(hello.hasNext()) {
-            System.out.println(hello.next().toString());
-        }
-    }
-
     public Iterator<Object[]> getTestData(String xlsFilepath, String sheetName,String methodName){
         Collection<Object[]> provider = new ArrayList<Object[]>();
         try {
@@ -47,7 +38,7 @@ public class ReadXlsFile {
                     dataFactory.setValidationParameters(validation_Obj);
                     provider.add(new Object[]{dataFactory});
                 } else {
-                    //System.out.println("Test case " + methodName + "is not enabled for Execution");
+                    System.out.println("Test case " + methodName + "is not enabled for Execution");
                 }
             }
         }catch(Exception e){

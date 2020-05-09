@@ -1,5 +1,8 @@
 package com.enquero.reporter;
 
+import com.assertthat.selenium_shutterbug.core.PageSnapshot;
+import com.assertthat.selenium_shutterbug.core.Shutterbug;
+import com.assertthat.selenium_shutterbug.utils.web.ScrollStrategy;
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
@@ -9,6 +12,7 @@ import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import java.io.File;
+import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.HashMap;
@@ -33,6 +37,7 @@ public class ExtentTestReporter {
     }
 
     public static ExtentReports createInstance() {
+        //System.out.println("user directory"+System.getProperty("system.dir"));
         System.out.println("file path: " + reportFileLocation);
         String fileName = getReportPath(reportFilepath);
         htmlReporter = new ExtentHtmlReporter(fileName);
@@ -112,6 +117,23 @@ public class ExtentTestReporter {
             result.append( NEW_LINE );
         }
         return result.toString();
+    }
+
+    public static String getFullPageShutterbug(WebDriver driver,String ScreenshotName) throws IOException {
+        File f1 = new File(screenshotFilepath);
+        if (!f1.exists()) {
+            if (f1.mkdir())
+                getTest().info("Directory: " + f1.getAbsolutePath() + " is created!");
+            else {
+                getTest().info("Failed to create directory: " + f1.getAbsolutePath());
+            }
+        } else {
+            System.out.println("Directory already exists at: " + f1.getAbsolutePath());
+        }
+        String destination = screenshotFilepath + fileSeperator ;
+        FileUtils.cleanDirectory(f1);
+        Shutterbug.shootPage(driver, ScrollStrategy.WHOLE_PAGE).withName(ScreenshotName + "_" + dateName).save(destination);
+        return destination+ScreenshotName + "_" + dateName + ".png";
     }
 
 }

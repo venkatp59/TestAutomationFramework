@@ -14,13 +14,15 @@ import java.util.Iterator;
 public class TestLoginxml {
 
     WebDriver driver;
+    String path= System.getProperty("user.dir")+System.getProperty("file.separator")+"src\\main\\resources\\testData.xml";
+
     @DataProvider(name="getTestData", parallel=false)
     public Iterator<Object[]> getTestData(Method m) throws IOException {
         ReadXMLFile rd = new ReadXMLFile();
-        return rd.getTestData("C:\\Enquero_Automation_Framework\\TestExecutor\\src\\main\\resources\\testData.xml","testGoogle");
+        return rd.getTestData(path,"testGoogle");
     }
 
-     @Parameters({ "browser", "webRunMode" })
+    @Parameters({ "browser", "webRunMode" })
     @BeforeClass
     public void setup(@Optional ("chrome") String browser,@Optional ("local") String runmode) throws  MalformedURLException {
         System.out.println("RunMode is"+runmode);
@@ -39,11 +41,6 @@ public class TestLoginxml {
         driver.get("https://www.moneycontrol.com/");
     }
 
-    //@Test(dataProvider="getTestData")
-    public void testLoginFacebook(TestDataFactory dataFactory) {
-        ReadXMLFile rd = new ReadXMLFile();
-        rd.getTestData("C:\\Enquero_Automation_Framework\\TestExecutor\\src\\main\\resources\\testData.xml","testcaseId");
-    }
 
     @AfterClass
     public  void tearDown(){

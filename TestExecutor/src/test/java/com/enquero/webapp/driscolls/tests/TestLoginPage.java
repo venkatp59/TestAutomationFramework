@@ -19,18 +19,17 @@ public class TestLoginPage {
 
     Logger logger= Logger.getLogger(TestLoginPage.class.getName());
     WebDriver driver;
+    String path= System.getProperty("user.dir")+System.getProperty("file.separator")+"src\\main\\resources\\testData.xlsx";
 
     @DataProvider(name="getTestData", parallel=false)
     public Iterator<Object[]> getTestData(Method m) throws IOException {
         ReadXlsFile rd = new ReadXlsFile();
-        return rd.getTestData("C:\\Enquero_Automation_Framework\\TestExecutor\\src\\main\\resources\\testData.xlsx","testcase",m.getName());
+        return rd.getTestData(path,"testcase",m.getName());
     }
 
     @Parameters({ "browser", "webRunMode" })
     @BeforeClass
     public void setup(@Optional("chrome") String browser, @Optional ("local") String webRunMode) throws IOException {
-        System.out.println("browser"+browser);
-        System.out.println("RunMode is"+webRunMode);
         WebDriverFactory driverFactory = new WebDriverFactory();
         driver = driverFactory.getDriver(browser, webRunMode);
         GenerateLogs.loadLogPropertyFile();
@@ -44,6 +43,7 @@ public class TestLoginPage {
     @Test(dataProvider="getTestData", description="Verifying login page title")
     public void testLogin(TestDataFactory dataFactory)
     {
+        System.out.println("data path is "+path);
         logger.info(Thread.currentThread().getName()+" Testlogin Test case started");
         ExtentTestReporter.getTest().log(Status.INFO,"Inside Test Method...");
         System.out.println(dataFactory.getInputParameters());
@@ -57,6 +57,7 @@ public class TestLoginPage {
         ExtentTestReporter.getTest().log(Status.PASS,"Validated url successfully");
         logger.info(Thread.currentThread().getName()+" testlogin Testcase ended");
     }
+
   /*  @Link
     @Epic("Second test case")
     @Severity(SeverityLevel.MINOR)
@@ -65,7 +66,7 @@ public class TestLoginPage {
     @Test(dataProvider="getTestData")
     public void testLoginFacebook(TestDataFactory dataFactory) {
         logger.info(Thread.currentThread().getName() +" facebook tc started");
-        driver.get("https://www.facebook.com/");
+        driver.get("https://www.selenium.dev/");
         System.out.println(dataFactory.getInputParameters());
         System.out.println(dataFactory.getValidationParameters());
         logger.info(Thread.currentThread().getName() +" Validation successfull for second tc");

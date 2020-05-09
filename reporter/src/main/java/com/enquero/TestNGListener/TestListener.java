@@ -31,7 +31,9 @@ public class TestListener implements ITestListener, ISuiteListener {
         System.out.println("Executed  "+result.getMethod().getMethodName()+" failed .....");
         String testMethodName = result.getName().trim();
         try {
-             path=ExtentTestReporter.getScreenshot(WebDriverFactory.getDriverinstance(),testMethodName);
+             //path=ExtentTestReporter.getScreenshot(WebDriverFactory.getDriverinstance(),testMethodName);
+           // path=ExtentTestReporter.getFullPageScreenShot(WebDriverFactory.getDriverinstance(),testMethodName);
+            path= ExtentTestReporter.getFullPageShutterbug(WebDriverFactory.getDriverinstance(),testMethodName);
         } catch (Exception e) {
             e.printStackTrace();
             //add the condition for API

@@ -13,10 +13,13 @@ import java.util.Iterator;
 
 public class Testloginjson {
     WebDriver driver;
+    String path= System.getProperty("user.dir")+System.getProperty("file.separator")+"src\\main\\resources\\testData.json";
+
+
     @DataProvider(name="getTestData", parallel=false)
     public Iterator<Object[]> getTestData(Method m) throws IOException {
         ReadJsonFile rd = new ReadJsonFile();
-        return rd.getTestData("C:\\Enquero_Automation_Framework\\TestExecutor\\src\\main\\resources\\testData.json","testGoogle");
+        return rd.getTestData(path,"testGoogle");
 
     }
     @Parameters({ "browser", "webRunMode" })
@@ -27,7 +30,7 @@ public class Testloginjson {
         driver = driverFactory.getDriver(browser, runmode);
     }
 
-    //@Test(dataProvider="getTestData")
+    @Test(dataProvider="getTestData")
     public void testLogin(TestDataFactory dataFactory)
     {
         System.out.println("Inside Method Test Money control");
@@ -39,10 +42,10 @@ public class Testloginjson {
         driver.get("https://www.moneycontrol.com/");
     }
 
-    //@Test(dataProvider="getTestData")
+    @Test(dataProvider="getTestData")
     public void testLoginFacebook(TestDataFactory dataFactory) {
         System.out.println("Inside Method Test Facebook");
-        //driver.get("https://www.facebook.com/");
+        driver.get("https://www.facebook.com/");
         System.out.println(dataFactory.getInputParameters());
         System.out.println(dataFactory.getValidationParameters());
     }

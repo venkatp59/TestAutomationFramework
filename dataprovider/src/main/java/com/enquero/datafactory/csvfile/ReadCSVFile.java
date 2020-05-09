@@ -8,14 +8,6 @@ import java.util.Collection;
 import java.util.Iterator;
 
 public class ReadCSVFile {
-    public static void main(String[] args) {
-        ReadCSVFile rd = new ReadCSVFile();
-        Iterator<Object[]> hello;
-        hello=rd.getTestData("C:\\Enquero_Automation_Framework\\TestExecutor\\src\\main\\resources\\testData.csv","testLogin");
-        while(hello.hasNext()) {
-            System.out.println(hello.next().toString());
-        }
-    }
 
     /**
      * @param csvFilepath the CSV file path which need to read
