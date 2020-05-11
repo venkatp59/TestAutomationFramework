@@ -7,23 +7,45 @@
 </head>
 <body>
 <table>
-<tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
-<tr><th colspan="7">Command line suite</th></tr>
-<tr><td><a href="#t0">Command line test</a></td><td class="num">0</td><td class="num">0</td><td class="num attn">4</td><td class="num">7,616</td><td></td><td></td></tr>
+<tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
+<tr><th colspan="7">Regression API Test Suite</th></tr>
+<tr><td><a href="#t0">Driscolls api App Test Cases</a></td><td class="num">4</td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">9,849</td><td></td><td></td></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Command line suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Command line test &#8212; failed</th></tr><tr class="failedeven"><td rowspan="4">com.enquero.api.driscolls.TestVersionReleaseDate</td><td><a href="#m0">bitbucketLatestVersion</a></td><td rowspan="1">1588823203058</td><td rowspan="1">4669</td></tr><tr class="failedeven"><td><a href="#m1">confluenceLatestVersion</a></td><td rowspan="1">1588823207731</td><td rowspan="1">1638</td></tr><tr class="failedeven"><td><a href="#m2">fecruLatestVersion</a></td><td rowspan="1">1588823209370</td><td rowspan="1">611</td></tr><tr class="failedeven"><td><a href="#m3">jiraLatestVersion</a></td><td rowspan="1">1588823209983</td><td rowspan="1">627</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Regression API Test Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Driscolls api App Test Cases &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">com.enquero.api.driscolls.tests.testEmployeeAPI</td><td><a href="#m0">getEmployeeIdDetails</a></td><td rowspan="1">1589201782794</td><td rowspan="1">880</td></tr><tr><th colspan="4">Driscolls api App Test Cases &#8212; passed</th></tr><tr class="passedeven"><td rowspan="4">com.enquero.api.driscolls.tests.testEmployeeAPI</td><td><a href="#m1">deleteEmployeeRecord</a></td><td rowspan="1">1589201784667</td><td rowspan="1">888</td></tr><tr class="passedeven"><td><a href="#m2">getEmployeeDetails</a></td><td rowspan="1">1589201776747</td><td rowspan="1">4528</td></tr><tr class="passedeven"><td><a href="#m3">postEmployeeDetails</a></td><td rowspan="1">1589201781282</td><td rowspan="1">1511</td></tr><tr class="passedeven"><td><a href="#m4">updateEmployeeDetails</a></td><td rowspan="1">1589201783680</td><td rowspan="1">985</td></tr></tbody>
 </table>
-<h2>Command line test</h2><h3 id="m0">com.enquero.api.driscolls.TestVersionReleaseDate#bitbucketLatestVersion</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.NullPointerException
-	at com.enquero.api.driscolls.TestVersionReleaseDate.bitbucketLatestVersion(TestVersionReleaseDate.java:90)
-... Removed 35 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m1">com.enquero.api.driscolls.TestVersionReleaseDate#confluenceLatestVersion</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.NullPointerException
-	at com.enquero.api.driscolls.TestVersionReleaseDate.confluenceLatestVersion(TestVersionReleaseDate.java:69)
-... Removed 35 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m2">com.enquero.api.driscolls.TestVersionReleaseDate#fecruLatestVersion</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.NullPointerException
-	at com.enquero.api.driscolls.TestVersionReleaseDate.fecruLatestVersion(TestVersionReleaseDate.java:117)
-... Removed 35 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m3">com.enquero.api.driscolls.TestVersionReleaseDate#jiraLatestVersion</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.NullPointerException
-	at com.enquero.api.driscolls.TestVersionReleaseDate.jiraLatestVersion(TestVersionReleaseDate.java:51)
-... Removed 35 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>Driscolls api App Test Cases</h2><h3 id="m0">com.enquero.api.driscolls.tests.testEmployeeAPI#getEmployeeIdDetails</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: 1 expectation failed.
+Expected status code &lt;200&gt; but was &lt;400&gt;.
+
+	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrap.callConstructor(ConstructorSite.java:84)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallConstructor(CallSiteArray.java:59)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:263)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:493)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)
+	at io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:674)
+	at org.codehaus.groovy.runtime.callsite.PlainObjectMetaMethodSite.doInvoke(PlainObjectMetaMethodSite.java:43)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:193)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:61)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:185)
+	at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:126)
+	at io.restassured.specification.ResponseSpecification$statusCode$0.callCurrent(Unknown Source)
+	at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:134)
+	at io.restassured.internal.ValidatableResponseOptionsImpl.statusCode(ValidatableResponseOptionsImpl.java:89)
+	at io.restassured.internal.ValidatableResponseImpl.super$2$statusCode(ValidatableResponseImpl.groovy)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:323)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1262)
+	at org.codehaus.groovy.runtime.ScriptBytecodeAdapter.invokeMethodOnSuperN(ScriptBytecodeAdapter.java:144)
+	at io.restassured.internal.ValidatableResponseImpl.statusCode(ValidatableResponseImpl.groovy:142)
+	at io.restassured.internal.ValidatableResponseImpl.statusCode(ValidatableResponseImpl.groovy)
+	at com.enquero.api.driscolls.tests.testEmployeeAPI.getRequest(testEmployeeAPI.java:329)
+	at com.enquero.api.driscolls.tests.testEmployeeAPI.getEmployeeIdDetails(testEmployeeAPI.java:124)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+... Removed 27 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m1">com.enquero.api.driscolls.tests.testEmployeeAPI#deleteEmployeeRecord</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m2">com.enquero.api.driscolls.tests.testEmployeeAPI#getEmployeeDetails</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m3">com.enquero.api.driscolls.tests.testEmployeeAPI#postEmployeeDetails</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m4">com.enquero.api.driscolls.tests.testEmployeeAPI#updateEmployeeDetails</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>

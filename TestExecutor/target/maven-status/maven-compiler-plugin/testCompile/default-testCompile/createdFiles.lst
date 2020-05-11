@@ -1,3 +1,5 @@
+com\enquero\api\driscolls\pojo\employeeDetails.class
+com\enquero\api\driscolls\tests\testEmployeeAPI.class
+com\enquero\api\driscolls\endpoints\Endpoints.class
 com\enquero\webapp\driscolls\tests\TestLoginPage.class
-com\enquero\api\driscolls\TestVersionReleaseDate.class
 com\enquero\mobileapp\driscolls\TestMobileApp.class

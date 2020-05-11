@@ -31,15 +31,15 @@ public class TestListener implements ITestListener, ISuiteListener {
         String path = null;
         System.out.println("Executed  "+result.getMethod().getMethodName()+" failed .....");
         String testMethodName = result.getName().trim();
-        try {
-             path=ExtentTestReporter.getScreenshot(WebDriverFactory.getDriverinstance(),testMethodName);
-        } catch (Exception e) {
-            e.printStackTrace();
-            ExtentTestReporter.getTest().info(("An exception occurred while taking screenshot " + e.getCause()));
-        }
-        String tag= "<a href="+"\""+path+"\""+"target='_blank'"+">"+"Click here"+"</a";
-        System.out.print("tag name: "+tag);
-        ExtentTestReporter.getTest().log(Status.FAIL,"Test Case failed and screenshot attached: "+tag);
+//        try {
+//             path=ExtentTestReporter.getScreenshot(WebDriverFactory.getDriverinstance(),testMethodName);
+//        } catch (Exception e) {
+//            e.printStackTrace();
+//            ExtentTestReporter.getTest().info(("An exception occurred while taking screenshot " + e.getCause()));
+//        }
+//        String tag= "<a href="+"\""+path+"\""+"target='_blank'"+">"+"Click here"+"</a";
+//        System.out.print("tag name: "+tag);
+//        ExtentTestReporter.getTest().log(Status.FAIL,"Test Case failed and screenshot attached: "+tag);
         final Throwable error= result.getThrowable();
         final String message= ExtentTestReporter.getCustomStackTrace(error);
         String tag1= "<a href=\"javascript:window.alert('"+message+"');\">Click here</a>";

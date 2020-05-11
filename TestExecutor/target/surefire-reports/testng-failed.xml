@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite verbose="0" name="Failed suite [Command line suite]">
-  <test thread-count="5" verbose="0" name="Command line test(failed)">
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite thread-count="1" guice-stage="DEVELOPMENT" verbose="0" name="Failed suite [Regression API Test Suite]" parallel="methods">
+  <listeners>
+    <listener class-name="com.enquero.TestNGListerner.TestListener"/>
+  </listeners>
+  <test thread-count="1" verbose="0" name="Driscolls api App Test Cases(failed)" parallel="methods">
     <classes>
-      <class name="com.enquero.api.driscolls.TestVersionReleaseDate">
+      <class name="com.enquero.api.driscolls.tests.testEmployeeAPI">
         <methods>
-          <include name="jiraLatestVersion"/>
-          <include name="beforeTest"/>
-          <include name="bitbucketLatestVersion"/>
-          <include name="fecruLatestVersion"/>
+          <include name="getEmployeeIdDetails"/>
           <include name="afterTest"/>
-          <include name="confluenceLatestVersion"/>
+          <include name="beforeTest"/>
         </methods>
-      </class> <!-- com.enquero.api.driscolls.TestVersionReleaseDate -->
+      </class> <!-- com.enquero.api.driscolls.tests.testEmployeeAPI -->
     </classes>
-  </test> <!-- Command line test(failed) -->
-</suite> <!-- Failed suite [Command line suite] -->
+  </test> <!-- Driscolls api App Test Cases(failed) -->
+</suite> <!-- Failed suite [Regression API Test Suite] -->

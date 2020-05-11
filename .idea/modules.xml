@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/Enquero_Automation_Framework.iml" filepath="$PROJECT_DIR$/Enquero_Automation_Framework.iml" />
+      <module fileurl="file://$PROJECT_DIR$/TestExecutor/TestExecutor.iml" filepath="$PROJECT_DIR$/TestExecutor/TestExecutor.iml" />
+      <module fileurl="file://$PROJECT_DIR$/api_utility/api_utility.iml" filepath="$PROJECT_DIR$/api_utility/api_utility.iml" />
+      <module fileurl="file://$PROJECT_DIR$/common_utility/common_utility.iml" filepath="$PROJECT_DIR$/common_utility/common_utility.iml" />
+      <module fileurl="file://$PROJECT_DIR$/dataprovider/dataprovider.iml" filepath="$PROJECT_DIR$/dataprovider/dataprovider.iml" />
+      <module fileurl="file://$PROJECT_DIR$/db_utility/db_utility.iml" filepath="$PROJECT_DIR$/db_utility/db_utility.iml" />
+      <module fileurl="file://$PROJECT_DIR$/driverfactory/driverFactory.iml" filepath="$PROJECT_DIR$/driverfactory/driverFactory.iml" />
+      <module fileurl="file://$PROJECT_DIR$/reporter/reporter.iml" filepath="$PROJECT_DIR$/reporter/reporter.iml" />
+    </modules>
+  </component>
+</project>

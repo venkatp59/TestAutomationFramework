@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="reporter" />
+        <module name="db_utility" />
+        <module name="dataprovider" />
+        <module name="TestExecutor" />
+        <module name="common_utility" />
+        <module name="api_utility" />
+        <module name="driverFactory" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="api_utility" target="1.8" />
+      <module name="common_utility" target="1.8" />
+      <module name="dataprovider" target="1.8" />
+      <module name="db_utility" target="1.8" />
+      <module name="driverFactory" target="1.8" />
+      <module name="Enquero_Automation_Framework" target="1.8" />
+      <module name="reporter" target="1.8" />
+      <module name="TestExecutor" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

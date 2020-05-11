@@ -1,20 +1,12 @@
 -------------------------------------------------------------------------------
 Test set: TestSuite
 -------------------------------------------------------------------------------
-Tests run: 4, Failures: 4, Errors: 0, Skipped: 0, Time elapsed: 8.597 sec <<< FAILURE!
-bitbucketLatestVersion(com.enquero.api.driscolls.TestVersionReleaseDate)  Time elapsed: 4.674 sec  <<< FAILURE!
-java.lang.NullPointerException
-	at com.enquero.api.driscolls.TestVersionReleaseDate.bitbucketLatestVersion(TestVersionReleaseDate.java:90)
+Tests run: 5, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 11.29 s <<< FAILURE! - in TestSuite
+getEmployeeIdDetails(com.enquero.api.driscolls.tests.testEmployeeAPI)  Time elapsed: 0.883 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <200> but was <400>.
 
-confluenceLatestVersion(com.enquero.api.driscolls.TestVersionReleaseDate)  Time elapsed: 1.635 sec  <<< FAILURE!
-java.lang.NullPointerException
-	at com.enquero.api.driscolls.TestVersionReleaseDate.confluenceLatestVersion(TestVersionReleaseDate.java:69)
-
-fecruLatestVersion(com.enquero.api.driscolls.TestVersionReleaseDate)  Time elapsed: 0.611 sec  <<< FAILURE!
-java.lang.NullPointerException
-	at com.enquero.api.driscolls.TestVersionReleaseDate.fecruLatestVersion(TestVersionReleaseDate.java:117)
-
-jiraLatestVersion(com.enquero.api.driscolls.TestVersionReleaseDate)  Time elapsed: 0.628 sec  <<< FAILURE!
-java.lang.NullPointerException
-	at com.enquero.api.driscolls.TestVersionReleaseDate.jiraLatestVersion(TestVersionReleaseDate.java:51)
+	at com.enquero.api.driscolls.tests.testEmployeeAPI.getRequest(testEmployeeAPI.java:329)
+	at com.enquero.api.driscolls.tests.testEmployeeAPI.getEmployeeIdDetails(testEmployeeAPI.java:124)
 
