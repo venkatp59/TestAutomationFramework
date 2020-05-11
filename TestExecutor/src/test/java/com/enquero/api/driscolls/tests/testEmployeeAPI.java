@@ -56,13 +56,12 @@ public class testEmployeeAPI {
     public void getEmployeeDetails(){
 
         endpoint = Endpoints.EMPLOYEES;
-        System.out.println(baseURI);
         ExtentTestReporter.getTest().log(Status.INFO,"Base URI is : " + baseURI);
         JsonPath getEmpDetails = getRequest(baseURI, basePath, endpoint, queryParam);
+        ExtentTestReporter.getTest().log(Status.INFO,"Get request is executed Successfully" );
         String status = getEmpDetails
                 .getString("status");
         ExtentTestReporter.getTest().log(Status.INFO,"Response Body Status is : " + status);
-        System.out.println("Status : " + status);
         Assert.assertEquals("success",status);
         ExtentTestReporter.getTest().log(Status.INFO,"Expected and Actual is matched");
         ExtentTestReporter.getTest().log(Status.INFO,"Test Passed Successfully");
@@ -92,7 +91,7 @@ public class testEmployeeAPI {
                 .then()
                 .assertThat()
                 .statusCode(Endpoints.STATUSCODE).extract().response();
-
+        ExtentTestReporter.getTest().log(Status.INFO,"Post request is executed Successfully" );
         System.out.println(response.getBody().asString());
         String actname = getStringResponse(response,namepath);
         String actstatus = getStringResponse(response,"status");
@@ -122,6 +121,8 @@ public class testEmployeeAPI {
 //        ExtentTestReporter.getTest().log(Status.INFO,"Test Passed Successfully");
 
         JsonPath getEmpDetails = getRequest(baseURI, basePath, endpoint);
+        ExtentTestReporter.getTest().log(Status.INFO,"Get request is executed Successfully" );
+
         String status = getEmpDetails
                 .getString("status");
 //        System.out.println(status);
@@ -153,6 +154,7 @@ public class testEmployeeAPI {
                 .then()
                 .assertThat()
                 .statusCode(Endpoints.STATUSCODE).extract().response();
+        ExtentTestReporter.getTest().log(Status.INFO,"Put request is executed Successfully" );
 
         System.out.println("Response Body is : " + response.getBody().asString());
 
@@ -175,6 +177,8 @@ public class testEmployeeAPI {
 
         String message = deleteJsonPath(endpoint, "")
                 .getString("status");
+        ExtentTestReporter.getTest().log(Status.INFO,"Delete request is executed Successfully" );
+
         Assert.assertNotNull(message);
 //        System.out.println(message);
         ExtentTestReporter.getTest().log(Status.INFO,"Employee details deleted Successfully");
